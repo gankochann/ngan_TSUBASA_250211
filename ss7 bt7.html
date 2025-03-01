@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            width: 1200px; height: 800px;
+            #ss1{
+                background-color: black; color: aliceblue;
+                display: flex; 
+                flex-direction: row;
+            }
+            #dv1{
+                display: flex;  gap: 50px;
+                position: absolute;
+                right: 450px;
+                top: 30px;
+                }
+
+            .ss2{
+                position: relative;
+                left: 120px;
+            }
+            #ss3{
+                background-color: black; color: aliceblue;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section id="ss1">
+            <h1 style="position: relative; left: 50px;">MY BLOG</h1>
+            <div id="dv1">
+                <div>home</div>
+                <div>about</div>
+                <div>posts</div>
+                <div>contact</div>
+            </div>
+        </section>
+        <section class="ss2" style="width: 700px; height: 250px; background-color: rgb(183, 183, 181);">
+            <h3>bai viet noi bat</h3>
+            <h4>tieu de bai viet chinh</h4>
+            <p>lorem ipsum dodor sit amet, consectetur adipising elit. donec us nullia eu lorem tincidunt tristique</p><br>
+            <a href="">doc them</a>
+        </section>
+        <section class="ss2" style="width: 700px; height: 300px;  background-color: rgb(232, 232, 224);">
+            <h3>cac bai viet khac</h3>
+            <h4>bai viet 1</h4>
+            <p>lorem ispum dodor sit amit....</p>
+            <h4>bai viet 2</h4>
+            <p>ut nodio eu lorem tincidunt</p>
+            <h4>bai viet 3</h4>
+            <p>consectetor adipiscing elit</p>
+        </section>
+        <section id="ss3">
+            &copy;2023 my blog. all rights reserved
+        </section>
+    </main>
+</body>
+</html>
