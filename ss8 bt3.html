@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .dvc{
+            display: flex;
+            flex-direction: row; gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .dvc .dv{
+            background-color: burlywood;
+            width: 45%;
+            min-height: 100px;
+        }
+        @media screen and (max-width: 468px) {
+            .dvc .dv{
+                width: 95%;
+                background-color: brown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dvc">
+        <div class="dv">thong tin 1</div>
+        <div class="dv">thong tin 2</div>
+        <div class="dv">thong tin 3</div>
+        <div class="dv">thong tin 4</div>
+    </div>
+</body>
+</html>

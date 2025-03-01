@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .dvc{
+            display: flex;
+            flex-direction: row; gap: 20px;
+            padding: 0 20px;
+            flex-wrap: wrap;
+        }
+        .dvc .dv{
+            background-color: aquamarine;
+            width: 40%;
+            min-height: 100px;
+        }
+        @media screen and (max-width: 480px) {
+            .dvc .dv{
+                width: 100%;
+                background-color: blue;
+            }
+         }
+    </style>
+</head>
+<body>
+    <div class="dvc">
+        <div class="dv">khoi 1</div>
+        <div class="dv">khoi 2</div>
+        <div class="dv">khoi 3</div>
+    </div>
+</body>
+</html>
