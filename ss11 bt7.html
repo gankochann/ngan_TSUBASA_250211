@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("hay nhap so a"));
+        let b = Number(prompt("hay nhap so b"));
+        let c = prompt(`hay chon mot trong cac phep tinh sau:
+        1. phep cong
+        2.phep tru
+        3.phep nhan
+        4.phep chia`);
+        switch(parseInt(c)){
+            case 1:
+                alert(`ket qua cua a cong b bang: ${parseInt (a)} + ${parseInt (b)}`);
+                break;
+            case 2:
+                alert( `ket qua cua a tru b bang: ${parseInt(a)} - ${parseInt(b)}`);
+                break;
+            case 3:
+                alert( `ket qua cua a nhan b bang: ${parseInt(a)} * ${parseInt(b)}`);
+                break;
+            case 4:
+                alert( `ket qua a chia b bang: ${parseInt(a)} \ ${parseInt(b)}`);
+                break;
+        }
+
+    </script>
+</body>
+</html>
