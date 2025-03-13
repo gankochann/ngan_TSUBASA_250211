@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //bai 1: nhap 2 so a va b. kiem tra a co chia het cho b khong
+        let a = Number(prompt("hay nhap vao so a"));
+        let b = Number(prompt("hay nhap vao so b"));
+        if( a % b ===0){
+            console.log("so a chia het cho so b");
+        } 
+     //bai 2: nhap tuoi va in ra ket qua co du dieu kien vao cap 3 khong   
+        let tuoi = Number(prompt("hay nhap vao so tuoi cua ban"));
+        if( tuoi>=15 && tuoi<=18){
+            alert("ban da du tuoi vao cap 3");
+        }
+     //nhap 1 so nguyen bat ki va in ra man hinh so do co lon hon khong hay khong
+        let c = parseFloat(prompt("hay nhap vao mot so nguyen"));
+        let d = c >=0 ? "so ban nhap lon hon o " : " so ban nhap nho hon khong ";
+     //xep loai hoc luc hoc sinh thong qua cac bai kiem tra
+        let diemKiemTra = Number(prompt("hay nhap vao diem kiem tra  cua ban"));
+        let diemGiuaKi = Number(prompt("hay nhap vao diem giua ki cua ban"));
+        let diemCuoiKi = Number(prompt("hay nhap vao diem cuoi ki cua ban"));
+        if (diemKiemTra>=8 && diemGiuaKi>=8 && diemCuoiKi>=8){
+            console.log("ban xep hang gioi");
+        } else if (diemKiemTra>=6 && diemGiuaKi>=6 && diemCuoiKi>=6){
+            console.log("ban xep hang kha");
+        }else{
+            console.log("ban xep hang trung binh");
+        }
+     //nhap vao 3 so nguyen va kiem tra gia tri max
+        let soNguyen1 = parseFloat(prompt("hay nhap vao mot so nguyen"));
+        let soNguyen2 = parseFloat(prompt("hay nhap vao mot so nguyen"));
+        let soNguyen3 = parseFloat(prompt("hay nhap vao mot so nguyen"));
+        if( soNguyen1>soNguyen2 && soNguyen1>soNguyen3){
+            console.log("so nguyen 1 laf gia tri lon nhat trong ba so ban nhap");
+        }
+
+    </script>
+</body>
+</html>
