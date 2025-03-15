@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let m = prompt("moi ban nhap vao day mot day so:");
+        let n = m.split(" ");
+        console.log(n);
+        let minnumber = parseInt(n[0]);
+        for( let i = 0 ; i < n.length ; i++ ){
+            if(minnumber > parseInt(n[i])){
+                minnumber = parseInt(n[i]);
+            }
+        }
+        alert("so nho nhat trong mang la:" + minnumber);
+        
+        console.log("so nho nhat trong mang la:" + minnumber);
+       </script>
+</body>
+</html>

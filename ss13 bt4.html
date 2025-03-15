@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let m = prompt("moi ban nhap vao day mot day so:");
+    let n = m.split(" ");
+    console.log(n);
+    let maxnumber = parseInt(n[0]);
+    for( let i = 1 ; i < n.length ; i++ ){
+        if(maxnumber < parseInt(n[i])){
+            maxnumber = parseInt(n[i]);
+        }
+    }
+    alert("so lon nhat trong mang la:" + maxnumber);
+    
+    console.log("so lon nhat trong mang la:" + maxnumber);
+   </script> 
+</body>
+</html>

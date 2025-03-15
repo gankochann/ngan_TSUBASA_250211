@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = prompt("moi ban nhap vao mot day so");
+        let newArr = n.split(" ");
+        console.log(newArr);
+        let sumSoChan = 0 ;
+        let SumSoLe = 0 ;
+        for( let i=0; i<newArr.length; i++){
+            if(parseInt(newArr[i]) % 2 ===0){
+                sumSoChan = sumSoChan + parseInt(newArr[i]);
+            }else{
+                SumSoLe = SumSoLe + parseInt(newArr[i]);
+            }
+        }
+        console.log("tong so chan:" + sumSoChan);
+        console.log("tong so le:" + SumSoLe);
+    </script>
+</body>
+</html>
