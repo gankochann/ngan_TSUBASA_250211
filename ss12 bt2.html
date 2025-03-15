@@ -10,6 +10,37 @@
     let a = Number(prompt("nhap vao do dai canh cua hinh  vuong"));
     let dienTichHinhVuong = a*a;
     console.log(dienTichHinhVuong);
+ //tinh dien tich hinh chu nhat
+    let b = Number(prompt("nhap chieu dai hcn"));
+    let c = Number(prompt("nhap chieu rong hcn"));
+    let dienTichHcn = b*c;
+    console.log(`dien tich hinh chu nhat bang`, dienTichHcn );
+ //dien tich tam giac vuong
+    let d = Number(prompt("nhap 1 canh cua tam giac vuong"));
+    let e = Number(prompt("nhap 1 canh cua tam giac vuong"));
+    let dienTichTamGiacVung = (d + e) / 2;
+    console.log(`dien tich tam giac vuong bang`, dienTichTamGiacVung);
+ /*giai phuong trinh bac 2
+ y = ax^2 + bx + c*/
+   let a1 = Number(prompt("hay nhap vao so a"));
+   let b1 = Number(prompt("hay nhap vao so b"));
+   let c1 = Number(prompt("hay nhap vao so c"));
+   let denta = b ** 2- 4*a*c;
+   if( denta > 0 ){
+    let x1 = (-b + Math.sqrt(denta)) / (2 * a);
+    let x2 = (-b - Math.sqrt(denta)) / (2 * a);
+    console.log(`phuong trinh co 2 nghiem x1 = ${x1} , x2= ${x2}`);
+   } else if (denta === 0){
+    let x1= -b / (2 * a);
+    console.log(`phuong trinh co nghiem kep x1=x2= ${x1}`);
+   }else{
+    console.log(`phuong trinh vo nghiem`);
+   }
+ //kiem tra tuoi cua mot nguoi
+   let tuoi = parseFloat(prompt("moi ban nhap vao so tuoi cua minh"));
+   let xacDinhTuoi = 
+   (tuoi>0 && tuoi<120) ? "chuc mung ban la nguoi" : "so tuoi cua ban nhap vao khong phu hop";
+
    </script> 
 </body>
 </html>
