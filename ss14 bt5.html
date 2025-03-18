@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let rectangle = {
+        width: 10,
+        height: 5,
+        color: "blue",
+    };
+    //duyet qua toan bo doi tuong in ra man hinh dang key:value
+    // let entries = Object.entries(rectangle);
+    // console.log(entries);
+    let rectangle1 = {...rectangle};
+    console.log(rectangle1);
+    //tinh dien tich hinh chu nhat bang cacg goi 2 thuoc tinh height va with
+    let a = rectangle1.height; 
+    console.log("chieu rong hinh chu nhat la:" + a);
+    let b= rectangle1.width;
+    console.log("chieu dai hinh chu nhat la:" + b);
+    let dienTichHcn = a*b;
+    console.log("dien tich hinh chu nhat la:" + dienTichHcn);
+    </script> 
+</body>
+</html>

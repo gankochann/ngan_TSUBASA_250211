@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let original ={
+            name: "bob",
+            age: 30,
+        };
+        // console.log(original);
+    //sao chap doi tuong thanh doi tuong moi ten copy
+    let copy = {...original};
+    console.log(copy);
+    //thay doi gia tri thuoc tinh name cua copy tanh charlie
+    copy.name = "charlie";
+    console.log(copy);
+    //in ca hai doi tuong ra man hinh vaf kiem tra su khac biet
+    console.log(original);
+    console.log(copy);
+    //khi thay doi gia tri cua key se lam thay doi luon ca file goc.tuy vao muc dich su dung can chu y de tranh lam mat file goc.
+    </script>
+    
+</body>
+</html>
