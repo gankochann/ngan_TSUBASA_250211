@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //viet ct in cac ky tu ra nguoc lai
+        let a = ["c","s","c",2 , 6, 1];
+        a.reverse();
+        console.log("mang sau khi dao nguoc la:" ,a);
+        //viet ct khai bao 1 mang ky tu va in ra so ky tu so trong mang
+        let b = "ahjgjk2354ymenfvdabg456563573";
+        let count = 0;
+        for ( let i = 0; i < b.length ; i++){
+            if( parseInt(b.charAt(i))){
+                count++;
+            }
+        }
+        console.log("so ky tu so bang" , count);
+        //viet ct nhap vao 2 chuoi kt xem 2 chuoi co giong nhau khong
+        let d = "cat";
+        let f = "dog";
+        if(d.length != f.length){
+            console.log("2 chuoi khong giong nhau");
+        }else{
+            let result = true ;
+            for( let i = 0 ; i < d.length ; i++){
+                if( d.charAt(i) != f.charAt(i)){
+                    result = false;
+                    break ;                 
+                }
+            }
+            if(result){
+                console.log("hai chuoi giong nhau");
+            }else{
+                console.log("hai chuoi khong giong nhau");
+            }
+        }
+        //Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+        let x = "tu-hoc-java";
+        let y = "";
+        for ( let i= 0 ; i < x.length ; i++){
+            if ( x.charAt(i)== "-"){
+                y += "_";
+            } else{
+                y += x.charAt(i);
+            }
+        }
+        console.log(y);
+        // Viết một chương trình để đếm số ký tự trong một chuỗi.
+        let v = ["a",1 , "b" , 4, "d"];
+        for( let i= 0 ; i < v.length ; i++){
+            if ( parseInt(v[i])){
+                console.log(v[i]);
+            }
+         }
+    </script>
+</body>
+</html>

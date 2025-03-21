@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     // Bài 1: Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử.
+     //  Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.  
+        let a = [1,12,13,14,3,12,34,22,45,55];
+        let b =0;
+        for (let i=0; i<a.length;i++){
+            if(a[i]>10){
+                b++;
+            }
+        };
+        console.log(`so phan tu lon hon 10 trong bien a bang ${b}`);
+        // Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử khác nhau. 
+        // Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó
+        let c = [1,12,13,14,3,12,34,22,45,55];
+        let max = c[0];
+        let d = 0;
+        let sum = 0;
+
+        for ( let i=1; i<c.length;i++){
+            if(max < c[i]){
+                max = c[i];   
+                d = i; 
+            }
+            sum+= c[i];
+        }
+        console.log("gia tri lon nhat la" , max );
+        console.log("vi tri cua so lon nhat la" , d);
+        console.log("gia tri trung binh"+ (sum / c.length));
+        //Bài 4: Viết chương trình khởi tạo nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+        let e = [1,12,13,14,3,12,34,22,45,55];
+        let f = e.reverse();
+        console.log(f);
+       //: Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử.
+       //  Nhập phần tử số nguyên và tìm xem số đó có nằm trong mảng số nguyên không?
+       //  Nếu có thuộc mảng số nguyên thì in ra "Number X is in the array" còn lại in ra "Number X is not in the array".
+       let g = [1,12,13,14,3,12,34,22,45,55];
+       let h = 12;
+       for (let i=0; i<g.length;i++){
+        if(h===g[i]){
+            console.log("number x is in the array")
+        }else{
+            console.log("number x not is in the array");
+        }
+       };
+       //bai tap 5
+       let j= ["afhj",23,56,24,-23, -45, "ajkhjf"];
+       let count = 0;
+       for (let i = 0; i < j.length; i++){
+        if(parseInt(j[i]) && parseInt(j[i]) < 0){
+           count++;
+        }
+       }
+       console.log(count);
+       // Viết chương trình khởi tạo nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+       //  Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên. 
+       // Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+       let k = [1,2,3,4,5];
+       let l = [6,7,8,9,10];
+       let z = k.concat(l);
+       console.log(" tap hop cua 2 mang la" , z);
+    </script>
+</body>
+</html>
