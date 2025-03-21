@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //tao ham tinh tong
+       let arr1 = [1, 2, 3, 4, 5, 6];
+       let tong1 = arr1.reduce(function( acc , cur){
+        acc += cur;
+        return acc;
+       });
+       console.log("tong cua mang bang" , tong1);
+
+       let arr2 = [10, 20, 30, 40, 50];
+       let tong2 = arr2.reduce(function(a , b){
+        a+=b;
+        return a;
+       });
+       console.log("tong gia tri cua mang bang" , tong2);
+
+       let arr3 = [1, 3, 5, 7, 9];
+       let tong3 = arr3.reduce(function(a, b){
+        a+=b;
+        return a;
+       });
+       console.log("tong gia tri bang" , tong3);
+
+    </script>
+</body>
+</html>

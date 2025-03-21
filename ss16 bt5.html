@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ //Cho người dùng nhập vào chuỗi ký tự 
+ // và viết hàm kiểm tra xem đó có phải chuỗi ký tự đối xứng không:   
+     let a = prompt("hay nhap vao mot chuoi bat ki");
+     let b = function isPalindrome (a){
+        for( let i = 0 ; i < a.length / 2 ; i++){
+            if( a.charAt(i) != a.charAt(a.length -1 - i)){
+                return "khong phai chuoi doi xung";
+            };
+        };
+        return "chuoi doi xung";
+    };
+     console.log(b(a));
+    </script>
+</body>
+</html>

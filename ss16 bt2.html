@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//tim gtnn cua cac mang cho san.
+//ham arr1
+     let arr1 = [3, 5, 1, 8, -3, 7, 8];
+     let a = function timMin(arr1){
+        let min = arr1[0];
+        for(let i = 0 ; i < arr1.length ; i++){
+            if(arr1[i] < min){
+                min = arr1[i];
+            }
+        }
+        return min;
+     }
+     console.log(a(arr1));
+
+//ham arr2
+      let arr2 = [7, 12, 6, 9, 20, 56, 89];
+      let b = function timMin(arr2){
+        let min = arr2[0];
+        for( let i = 0 ; i < arr2.length ; i++){
+            if(arr2[i] < min){
+                min = arr2[i];
+            }
+        }
+        return min;
+      };
+      console.log(b(arr2));
+
+//  const arr3 = [];
+     let arr3 = [];
+     let c = function tinMin(arr3){
+        let min = arr3[0];
+        for( let i = 0 ; i < arr3.length ; i++){
+            if(arr3[i] < min){
+                min = arr3[i];
+            }
+        }
+        return min;
+     }
+     console.log(c(arr3));
+//  const arr4 = [0, 0, 0, 0, 0, 0, 0];
+    let arr4 = [0 ,0 ,0 ,0 ,0 , 0 ,0];
+    let d = function timMin(arr4){
+        let min = arr4[0];
+        for( let i= 0 ; i < arr4.length ; i++){
+            if( arr4[i] < min){
+                min = arr4;
+            }
+        }
+        return min;
+    }
+     console.log(d(arr4));
+    </script>
+</body>
+</html>
