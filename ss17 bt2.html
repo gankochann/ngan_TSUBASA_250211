@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="mainn" style="height: 200px; width: 500px; background-color: white; color:black;">
+     <h1 class="toggle">TOGGLE DARK/LIGHT MODE</h1>
+     <div class="divv">click the button to toggle between dark and ligght mode for this page</div>
+     <button class="btnn">toggle dark mode</button>
+    </main>
+    <script>
+        let main1 = document.querySelector(".mainn");
+        console.log(main1);
+       // let theH1 = document.querySelector(".toggle");
+        //console.log(theH1);
+       // let div = document.querySelector(".divv");
+       // console.log(div);
+        let btn = document.querySelector(".btnn");
+        console.log(btn);
+        btn.onclick = function() {
+          if(main1.style.backgroundColor === "black"){
+            main1.style.color = "black";
+            main1.style.backgroundColor = "white";
+            btn.textContent = "toggle dark mode"
+          }else{
+            main1.style.color= "white";
+            main1.style.backgroundColor = "black";
+            btn.textContent = "toggle light mode";
+          }
+        }
+       </script>
+</body>
+</html>

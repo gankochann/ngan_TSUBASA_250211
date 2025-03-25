@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="hh1">THIS IS THE TEXT</h1>
+    <button class="btt1">HIDE TEXT</button>
+    <button class="btt2">SHOW TEXT</button>
+    <script>
+    let a = document.querySelector(".hh1");
+     console.log(a);
+    let btt1 = document.querySelector(".btt1");
+    console.log(btt1);
+    let btt2 = document.querySelector(".btt2");
+    console.log(btt2);
+    btt1.onclick = function() {
+        a.style.display = "none";
+    };
+    btt2.onclick = function() {
+        a.style.display = "block";
+    };
+    </script>
+</body>
+</html>

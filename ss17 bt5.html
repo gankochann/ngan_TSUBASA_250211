@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>LOG IN</h1>
+        <input placeholder="Email" class="email">
+        <br>
+        <input placeholder="password" class="password">
+        <br>
+        <button class="button">sign in</button>
+    </main>
+    <script>
+        let email1 = document.querySelector(".email");
+        console.log(email1);
+        let pass = document.querySelector(".password");
+        console.log(pass);
+        let btn = document.querySelector(".button");
+        console.log(btn);
+        btn.onclick = function(){
+            if(email1 === "huanrose@gmail.com" && pass == 123456 ){
+                alert("dang nhap thanh cong");
+            }else{
+                alert("dang nhap that bai");
+            };
+        };
+    </script>
+</body>
+</html>

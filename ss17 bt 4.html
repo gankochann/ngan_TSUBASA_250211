@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="mainn">
+        <h1>change background color</h1>
+        <div>mouse over the square</div>
+        <div class="divv" style="display: flex;flex-direction: row;">
+            <div class="div1" style="height: 100px; width: 100px; background-color: yellow;"></div>
+            <div class="div2" style="height: 100px; width: 100px;background-color: green;"></div>
+            <div class="div3" style="height: 100px; width: 100px;background-color: darkgray;"></div>
+        </div>
+    </main>
+    <script>
+        let theMain = document.getElementById("mainn");
+        let divv1 = document.querySelector(".div1");
+        console.log(divv1);
+        let divv2 = document.querySelector(".div2");
+        console.log(divv2);
+        let divv3 = document.querySelector(".div3");
+        console.log(divv3);
+        divv1.addEventListener("mouseenter", function(){
+            theMain.style.backgroundColor = "yellow";
+        });
+        divv2.addEventListener("mouseenter", function(){
+            theMain.style.backgroundColor = "green";
+        });
+        divv3.addEventListener("mouseenter", function(){
+            theMain.style.backgroundColor = "darkgray";
+        });
+    </script>
+</body>
+</html>
