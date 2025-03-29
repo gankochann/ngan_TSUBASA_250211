@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let hito = {
+            name : "pham thi ngan",
+            age : 27,
+            "dia chi" : "hung yen" ,
+            "so dien thoai" : "0388343512",
+        }
+       console.log(Object.entries(hito));
+       //bai 2
+       const studen = {
+        id : 1,
+        name : "nguyen van a",
+        gender : "nam",
+        age : 20,
+        mark : 8,
+       }
+       const newStuden = {
+        id : 2,
+        name : "nguyen van b",
+        gender : "nam",
+        age : 20,
+        mark : 9,
+       };
+       const students = {};
+       Object.assign(students , studen , newStuden );
+       console.log(students);
+       let a = Object.entries(students);
+       console.log(a);
+
+     //  let students = {...studen , ...newStuden};
+      // console.log(students);
+      //tim max
+     // let b = function timMax(students.count){
+        
+    
+    </script>
+</body>
+</html>

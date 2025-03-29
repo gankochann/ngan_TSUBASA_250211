@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>qyan ly sinh vien</h1>
+    <input id="name" placeholder="nhap ten" type="text"><br>
+    <input id="age" placeholder="nhap tuoi" type="text"> <br>
+    <input id="class" placeholder="nhap ten lop" type="text"><br>
+    <button onclick="addStudent()">them sinh vien</button>
+    <input id="search" oninput="findStudent()" placeholder="tim kiem sinh vien">
+    <table border ="1px">
+        <thead>
+            <tr>
+                <td>so thu tu</td>
+                <td>ten</td>
+                <td>tuoi</td>
+                <td>lop</td>
+                <td colspan="">action</td>
+            </tr>
+        </thead>
+        <tbody id="list">
+
+        </tbody>
+    </table>
+    <script>
+    //tao mang de them danh sach sinh vien
+    let students = [ ]; 
+    function addStudent(){
+        let studentName = document.getElementById("name").value;
+        let studentAge = document.getElementById("age").value;
+        let studentClass = document.getElementById("class").value;
+        let studentId;
+        if(students.length ==0){
+            studentId=1
+        }else{
+            studentId = students[students.length - 1].studentId + 1;
+        }
+        let student = {
+            Id : studentId,
+            name : studentName,
+            class : studentClass,
+            age : studentAge,
+        };
+        students.push(student);
+        showStudents(students);
+    }
+
+    function showStudents (list){
+        let str = " ";
+        for ( let i = 0; i < list.length; i++) {
+            str += 
+            `<tr>
+                <td> ${i + 1}</td>
+                <td> ${list[i].name}</td>
+                <td> ${list[i].age}</td>
+                <td> ${list[i].class}</td>
+                <td>
+                    <button onclick = updateStudent(${i})>sua </button>
+                    <button onclick = removeStudent( ${i})> xoa </button>
+                </td>
+            </tr>
+            `
+        }
+        document.getElementById("list").innerHTML = str ;
+    }
+    function removeStudent(index){
+        let confirmDelete = confirm("ban co muon xoa khong?");
+        if ( confirmDelete){
+            students.splice(index , 1);
+            showStudents();
+        }
+    }
+     function updateStudent(index){
+        students[index].name = prompt("nhap ten moi");
+        students[index].age = prompt(" nhao tuoi moi");
+        students[index].class = prompt ("nhap lop moi");
+        showStudents();
+      }
+      function findStudent() {
+        let searchName = document.getElementById("search").value;
+        let a = students.filter( item=> item.age.includes(searchName));
+        showStudents(a);
+      }
+    </script>
+</body>
+</html>

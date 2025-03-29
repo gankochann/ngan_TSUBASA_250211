@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let product = [
+            { id: 1 , name: "milk", count: 100},
+            { id: 2 , name: "orange", count: 100},
+            { id: 3 , name: "butter" , count: 100},
+        ];
+        let a = {
+            id: 4 , name: "banana", count: 100,
+        };
+        product.push(a);
+        console.log(product);
+        //xoa doi tuong co thuoc tinh id 2
+        product.splice(1,1);
+        console.log(product);
+        product[1].count = 0;
+        console.log(product);
+        //ktr butter cos trong product khong
+        for ( i = 0 ; i < product.length ; i++){
+            if ( product[i].name === "butter"){
+                console.log(product[i].name);
+            }else{
+                console.log("gia tri ban nhap k ton tai")
+            }
+        }
+        
+    </script>
+</body>
+</html>
