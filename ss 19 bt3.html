@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input{
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <main style="position: relative; width: 400px;height: 300px;">
+        <h1>login</h1>
+        <form>
+            <label>Email:</label><br>
+            <input placeholder="enter your email address" id="emaill" class="input">
+            <p id="erroremaill"></p>
+
+            <label>Passowrd:</label><br>
+            <input placeholder="enter your password" id="passwordd" class="input">
+            <img id="img" style="height: 30px; height: 30px; position: absolute;bottom: 105px; right: 10px;" src="https://th.bing.com/th/id/OIP.MQvgR4WJe_bG4xNVVw3iNwHaHa?w=250&h=250&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="">
+            <p id="errorpass"></p>
+
+            <button id="loginn" href="">login</button><br>
+            <a class="href" href="">Forgot password</a> or <a class="href" href="">SingUp</a>
+        </form>
+    </main>
+    
+    <script>
+        let email = document.getElementById("emaill");
+        let password = document.getElementById("passwordd");
+        let login = document.getElementById("loginn");
+        let erroremail = document.getElementById("erroremaill");
+        let errorPassword = document.getElementById("errorpass");
+        let imgg = document.getElementById("img");
+        let href = document.querySelectorAll(".href");
+        let users = JSON.parse(localStorage.getItem("users123")) || [];
+        function validateData() {
+            let result = true;
+            let emailValue = email.value;
+            let passwordValue = password.value;
+            if (emailValue ===""){
+                erroremail.innerHTML = "email khong duoc de trong";
+                result = false;
+            } else {
+                erroremail.innerHTML = "";
+            }
+            if (passwordValue === ""){
+                errorPassword.innerHTML = " password khong duoc de trong";
+                result = false;
+            } else {
+                errorPassword.innerHTML = "";
+            }
+            if (!emailValue === passwordValue) {
+                erroremail.innerHTML = "email va pass khong khop";
+                errorPassword.innerHTML = "email va pass khong khop";
+                result = false;
+            } else {
+                errorPassword.innerHTML = "";
+                erroremail.innerHTML = "";
+            }
+            return result;
+        }
+        imgg.onclick = function() {
+            if (password.getAttribute("type") === "password"){
+                password.setAttribute("type", "text");
+            } else {
+                password.setAttribute("type" , "password");
+            };
+        };
+          login.addEventListener("click", (e) => {
+            e.preventDefault();
+            let checkData = validateData();
+            if(checkData) {
+                let check = false;
+                for( let i = 0; i < users.lenght; i ++){
+                    if ( !users[i].email=== users[i].password){
+                        check = true;
+                        break;
+                    }
+                }
+                if (!checkData){
+                    let user = {
+                        id:1,
+                       email: email.value,
+                       password : password.value
+                    }
+                    users.push(user);
+                    localStorage.setItem("abc" , JSON.stringify(users));
+                    alert("dang ki thanh cong");
+                    window.location.href = "http://google.com"
+                }
+
+            }
+          })
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h2 class="">task management</h2>
+        <form>
+            <input placeholder="content" id="content">
+            <input id="date" type="date">
+            <select id="select">
+                <option>choose status</option>
+                <option>pending</option>
+            </select>
+            <input placeholder="username" id="username">
+            <input type="submit" id="submit" onclick="addList">
+        </form> 
+        <table border="1px" >
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Content</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Assigned to</th>
+                <th colspan="">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+          </table>
+
+
+    </main>
+    <script>
+        let content = document.getElementById("content");
+        let date = document.getElementById("date");
+        let select = document.getElementById("select");
+        let username = document.getElementById("username");
+        let sumit = document.getElementById("submit");
+        let tbody = document.getElementById("tbody");
+        const courses = [
+   {
+    id: 1,
+    content: 'Learn Javascript Session 01',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Anh Bách',
+  },
+  {
+    id: 2,
+    content: 'Learn Javascript Session 2',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Lâm th`',
+  },
+  {
+    id: 3,
+    content: 'Learn CSS Session 1',
+    dueDate: '2023-04-17',
+    status: 'Pending',
+    assignedTo: 'Hiếu Ci ớt ớt',
+  },
+];
+//tao ham them cong viec
+function addList(){
+    let content = document.getElementById("content").value;
+        let date = document.getElementById("date").value;
+        let select = document.getElementById("select").value;
+        let username = document.getElementById("username").value;
+        let id;
+        if ( courses.length = 0){
+            id = 1
+        } else{
+            id = courses[courses.length - 1].id + 1;
+        }
+        let list ={
+            id : id,
+            content : content,
+            dueData: date,
+            status : select,
+            assignedTo : username,
+        }
+        courses.push(list);
+        showlist(list);
+}
+//tao ham hien thi danh sach cong viec
+function showlist (list) {
+    let str = "";
+    for (let i = 0; i < list.length ; i++){
+        str +=
+        `<tr>
+                    <td>${i + 1}</td>
+                    <td>${list[i].content}</td>
+                    <td>${list[i].dueData}</td>
+                    <td>${list[i].status}</td>
+                    <td>${list[i].assigntedTo}</td>
+                    <td>
+                        <button onclick="update(${i})">sua</button>
+                        <button onclick="remove(${i})">xoa</button>
+                    </td>
+                
+                </tr>`
+    }
+   tbody.innerHTML = str;
+};
+//tao ham xoa cong viec
+function remove (index){
+    let Confirmdelete = confirm("ban co muon xoa khong");
+    if (Confirmdelete){
+        courses.splice(index,1);
+        showlist();
+    }
+}
+//tao ham cap nhat lai cong viec
+function update (index){
+    courses[index].content = prompt("moi nhapo vao noi dung cong viec");
+    courses[index].duedata = prompt("moi nhap vao data");
+    courses[index].status = prompt("moi nhap vao status");
+    courses[index].assignedTo = prompt("moi nhap vao assignto");
+    showlist();
+}
+
+    </script>
+</body>
+</html>

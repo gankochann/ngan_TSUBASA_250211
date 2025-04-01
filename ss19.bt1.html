@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main class="mainn">
+        <h2>register</h2>
+        <form class="form">
+            <label for="email">email:</label><br>
+            <input id="email" placeholder="enter your email address" name="email"> 
+            <p id="erroremail"></p>
+            <br>
+            <label for="password">password:</label><br>
+            <input id="password" placeholder="enter your password" name="password" type="password">
+            <p id="errorpass"></p>
+            <br>
+            <label for="confirmpassword"> confirm-password</label><br>
+            <input id="confirmpassword" placeholder="enter your confirm-password" name="confirm-password" type="password"><br>
+            <p id="errorconfirm" class=""></p>
+            <br>
+            <button class="btn" type="submit">register</button>
+        </form>
+    </main>
+
+
+    <script>
+        let userinput = [];
+        let email = document.getElementById("email");
+        let password = document.getElementById("password");
+        let confirmpassword = document.getElementById("confirmpassword");
+        let erroremail = document.getElementById("erroremail");
+        let errorpass = document.getElementById("errorpass");
+        let errorconfirm = document.getElementById("errorconfirm");
+        let btn = document.querySelector(".btn");
+        console.log(btn);
+        function validateData() {
+            let result = true;
+            let emailValue = email.value;
+            let passwordValue = password.value;
+            let confirmpasswordValue = confirmpassword.value;
+            if (emailValue === "") {
+                erroremail.innerHTML = "email khong duoc de rong";
+                result = false;
+            }else{
+                erroremail.innerHTML = "";
+            }
+            if ( passwordValue === ""){
+                errorpass.innerHTML = " passwords khong duoc de rong";
+                result = false;
+            }else {
+                errorpass.innerHTML = "";
+            }
+            if (confirmpasswordValue === ""){
+                errorconfirm.innerHTML = "confirmpassword khong duoc de trong";
+                result = false
+            }else{
+                if(confirmpasswordValue === passwordValue) {
+                    errorconfirm.innerHTML = "";
+                }else{
+                    errorconfirm.innerHTML = "password nhap lai khong trung khoip voi ben tren";
+                    result = false;
+                }
+            }
+            return result;
+        }
+        btn.addEventListener("click", (e) => {
+                e.preventDefault();
+            let checkData = validateData();
+            if(checkData){
+                let checkEmail = false;
+                for ( let i = 0; i < userinput.length ; i++){
+                    if(userinput[i].email === email.value){
+                        checkEmail = true;
+                        break;
+                    }
+                }
+                if(!checkEmail){
+                    let user = {
+                        id : 1,
+                        email: email.value,
+                        password: password.value,
+                    }
+                    userinput.push(user);
+                    alert("dang ki thanh cong");
+                    localStorage.setItem("user1", JSON.stringify(userinput));
+                }
+            } else{
+                alert("email da ton tai")
+            }
+        })
+
+    </script>
+</body>
+</html>
