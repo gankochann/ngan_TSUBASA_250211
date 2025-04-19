@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //tinh tong so chan va le co trong mang evenOdd(1,2,3,4,5)
+        function evenOdd(...args) {
+            const sumEven = args.filter((e) => e % 2 === 0);
+            const totalEven = sumEven.reduce((total, num) => total + num, 0);
+            const sumOdd = args.filter((e) => e % 2 !== 0);
+            const totalOdd = sumOdd.reduce((total, sum) => total + sum, 0);
+            console.log(`sumEven = ${sumEven} ; totalEven = ${totalEven}`);
+            console.log(`sumOdd = ${sumOdd} ; totalOdd = ${totalOdd}`);
+        }
+        evenOdd(1, 2, 3, 4, 5);
+        evenOdd(1, 2, 3, 4);
+        evenOdd(1, 2, 3);
+        //tinh tong cac so chan va le co trong mang evenOdd(1,2,3,4);
+        //su dung vong lap for
+        function evenOddd(...argss) {
+            const arrEven = [];
+            const arrOdd = [];
+            let totalEven = 0;
+            let totalOdd = 0;
+            for (let i = 0; i < argss.length; i++) {
+                if (argss[i] % 2 === 0) {
+                    arrEven.push(argss[i]);
+                    totalEven += argss[i];
+                } else {
+                    arrOdd.push(argss[i]);
+                    totalOdd += argss[i];
+                }
+            }
+            console.log(`arrEven = ${arrEven} ; totalEven = ${totalEven}`);
+            console.log(`arrOdd = ${arrOdd} ; totalOdd = ${totalOdd}`);
+        };
+        evenOddd(1, 2, 3, 4, 5);
+        evenOddd(1, 2, 3, 4);
+        evenOddd(1, 2, 3);
+    </script>
+</body>
+
+</html>
