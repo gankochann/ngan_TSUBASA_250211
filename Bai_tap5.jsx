@@ -1,51 +1,31 @@
 import React from 'react'
+import Heared from './Heared'
+import Body from './Body'
 
 export default function Bai_tap5() {
-    let users = [
-    {
-        id: 1,
-        userName : "nam",
-        dateOfBirthday : "02/02/1998",
-        gender : "nam",
-        address : "thanh xuan , ha noi"
-    } , 
-    {
-        id: 2,
-        userName : "lan",
-        dateOfBirthday : "02/05/1997",
-        gender : "nu",
-        address : "thanh xuan , ha noi"
-    },
-    ]
   return (
-    <div>
-        <table>
-            <thead>
-                <tr>
-                <th>STT</th>
-                <th>Ho va ten</th>
-                <th>Ngay sinh</th>
-                <th>Gioi tinh</th>
-                <th>Dia chi</th>
-                <th>Hanh dong</th>
-                </tr>
-            </thead>
-            <tbody>
-             {users.map((user,index)=>
-               <tr key={index}>
-                <td>{user.id}</td>
-                <td>{user.userName}</td>
-                <td>{user.dateOfBirthday}</td>
-                <td>{user.gender}</td>
-                <td>{user.address}</td>
-                <td>
-                    <button>sua</button>
-                    <button>xoa</button>
-                </td>
-               </tr>
-             )}
-            </tbody>
-        </table>
+   <>
+  {/* Hello world */}
+  <meta charSet="UTF-8" />
+  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Basic React Lab</title>
+  <div className="row">
+    <div className="col-lg-7 grid-margin stretch-card">
+      <div className="card">
+        {/* START CONTROL */}
+        {/* END CONTROL */}
+        {/* START LIST STUDENT */}
+     <Heared></Heared>
+        {/* END LIST STUDENT */}
+      </div>
     </div>
+    {/* START FORM SINH VIEN */}
+   <Body></Body>
+    {/* END FORM SINH VIÊN */}
+  </div>
+</>
+
   )
 }
