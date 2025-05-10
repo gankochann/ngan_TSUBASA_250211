@@ -1,21 +1,31 @@
 import React from 'react'
+import Pic4 from './Img/Pic4.JPG'
 
 export default function Login() {
   return (
-    <div className='w-[500px] h-[400px] justify-center px-[10px] rounded-md  bg-gray-200' >
-        <div className='w-[450px] h-[150px]  bg-gray-200'>
-        <h1 className='text-[30px] font-bold'>Login account</h1><br/>
-        <label/><b>Your email</b> <br/>
-        <input placeholder='name@gmail.com' className='border-[1px] bg-white text-black p-2 rounded-md w-[400px] h-[50px]'></input><br/>
-        </div>
-        <div className='w-[450px] h-[200px] bg-gray-200 ' >
-            <label/><b>Password</b>
-        <input placeholder='********'className='border-[1px]  bg-white text-black p-2 rounded-md w-[400px] h-[50px]' ></input><br/>
-        <br></br>
-        <button className='bg-blue-500 text-white w-[400px] h-[50px] rounded-md'>Login an account</button>
-        <br></br><br></br>
-        <p>Already have an acccount? <b>Register here</b></p>
-        </div>
-    </div>
+
+         <div className='flex'>
+       <img src={Pic4} alt=""  className='w-[500px] h-[500px]'/>
+       <div className='w-[500px] h-[500px] p-[50px] border
+border-gray-100'>
+        <h1>Login</h1>
+        <form>
+            <label>E-mail</label> <br/>
+            <input placeholder='placahoder contain' className='w-[400px] h-[50px] rounded  border
+border-gray-300 p-[30px]'></input><br/>
+            <label>Password</label><br/>
+            <input placeholder='placahoder contain' className='w-[400px] h-[50px] rounded  border
+border-gray-300 p-[30px]'></input><br/>
+            <p className='flex justify-end'>fortgot password</p>
+            <button className='bg-blue-500 text-white w-[400px] h-[50px] rounded '>Login</button>
+            <hr/>
+            <button className='bg-gray-500 text-white w-[400px] h-[50px] rounded '>Register now</button>
+
+
+        </form>
+       </div>
+       </div>
+
   )
-};
+}
+
