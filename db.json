@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": 3,
+      "name": "pham thi lan",
+      "email": "phamthilan@gmail.com",
+      "address": "hung ha",
+      "phone": "0321-123-231"
+    },
+    {
+      "name": "pham van hieu",
+      "email": "phamvanhieu@gmail.com",
+      "address": "hung yen",
+      "phone": "0321-345-000",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "laptop",
+      "price": "123445"
+    },
+    {
+      "id": 2,
+      "name": "ipad",
+      "price": "123245"
+    }
+  ],
+  "job": [
+    {
+      "job": "don dep",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "job": "nau nuong"
+    }
+  ]
+}
